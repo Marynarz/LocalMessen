@@ -1,4 +1,4 @@
-//Server na localu
+#Server na localu
 #!/usr/bin/python
 
 import socket
@@ -8,9 +8,10 @@ class ClientConn:
     conn = 0
     addr = 0
     data = ''
-    def ClientConn(self, conn, addr):
+    def __init__(self, conn, addr): #konstruktor, ustawiamy polaczenie i wywolujemy odbior wiadomosci
         self.conn = conn
         self.addr = addr
+        self.connHndl()
     def connHndl(self):
         while True:
             data = conn.recv(64)
@@ -25,5 +26,5 @@ sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM,proto)
 
 sock.bind(('localhost',9999))
 sock.listen(1)
-
-clientC = ClientConn(sock.accept())
+conn,addr = sock.accept()
+clientC = ClientConn(conn,addr)
