@@ -4,6 +4,7 @@
 import socket
 import sys
 
+#blok klas
 class ClientConn:
     conn = 0
     addr = 0
@@ -17,14 +18,18 @@ class ClientConn:
             data = conn.recv(64)
             if data:
                 conn.send(data[::-1])
+                print data
             conn.close()
             break
 
+#blok zmiennych
+conList = []
+
+#Start server
 print 'Witaj w serwerze'
 proto = socket.getprotobyname('tcp')
-sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM,proto)
-
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM, proto)
 sock.bind(('localhost',9999))
 sock.listen(1)
 conn,addr = sock.accept()
-clientC = ClientConn(conn,addr)
+conList.append(ClientConn(conn,addr))
