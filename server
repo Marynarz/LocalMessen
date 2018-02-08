@@ -2,6 +2,7 @@
 #!/usr/bin/python
 
 import socket
+import threading
 import sys
 
 #blok klas
@@ -31,5 +32,7 @@ proto = socket.getprotobyname('tcp')
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM, proto)
 sock.bind(('localhost',9999))
 sock.listen(1)
-conn,addr = sock.accept()
-conList.append(ClientConn(conn,addr))
+while True:
+    conn,addr = sock.accept()
+
+    client_thread = threading.Thread(target=ClientConn,args=(conn,addr))
