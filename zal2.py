@@ -3,6 +3,10 @@ import socket
 import struct
 import _thread
 
+#global vars
+multicast_group = '224.1.1.1'
+server_address = ('', 10000)
+
 #classes block
 class nickBase:
     usersBase = {}
@@ -19,11 +23,10 @@ class nickBase:
     def addNick(self, nick, addr):
         self.usersBase[nick] = addr
 
+#func block
+
 #Multicast listener
 def mCastListener():
-    multicast_group = '224.1.1.1'
-    server_address = ('', 10000)
-
     # Multicast Socket
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
 
@@ -44,6 +47,11 @@ def mCastListener():
         print(data.decode('utf8'))
         sock.sendto(bytes('ack','utf8'), address)
     print("Egzit!")
+
+#multicast sender
+def mCastSender(message):
+    message = bytes(message,"utf8")
+    sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM, socket.IPPROTO_UDP)
 
 #command line tool
 def cli():
