@@ -22,6 +22,7 @@ class nickBase:
 #global vars
 multicast_group = '224.1.1.1'
 server_address = ('', 10000)
+multicast_addr = ('224.1.1.1',1000)
 nickB = nickBase()
 
 #func block
@@ -50,36 +51,36 @@ def mCastListener():
     print("Egzit!")
 
 #multicast sender
-def mCastSender(message):
-    message = bytes(message,"utf8")
-    sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+def mCastSender(mess):
+    print(mess)
+    mess = bytes(mess,'utf8')
+    multicast_group = ('224.1.1.1', 10000)
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
     sock.settimeout(1)
 
-    #time to live, to the first router!
-    ttl = struct.pack('b',1)
-    sock.setsockopt(socket.IPPROTO_IP,socket.IP_MULTICAST_TTL,ttl)
+    ttl = struct.pack('b', 1)
+    sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, ttl)
 
     try:
-
-        # Send data to the multicast group
-        print >> sys.stderr, 'sending "%s"' % message
-        sent = sock.sendto(message, multicast_group)
+        sent = sock.sendto(mess, multicast_group)
 
         # Look for responses from all recipients
         while True:
-            print >> sys.stderr, 'waiting to receive'
+            #print('waiting to receive')
             try:
                 data, server = sock.recvfrom(16)
             except socket.timeout:
-                print >> sys.stderr, 'timed out, no more responses'
                 break
             else:
-                print >> sys.stderr, 'received "%s" from %s' % (data, server)
+                datatmp = data.decode('utf8').split()
+                print(str(server) + ": " +data.decode('utf8'))
 
     finally:
-        print >> sys.stderr, 'closing socket'
+        print('closing socket')
         sock.close()
-
+    return True
 
 #command line tool
 def cli():
@@ -94,6 +95,6 @@ def cli():
             _thread.start_new_thread(mCastListener,())
         elif command[0].lower() == "send":
             s = " ".join(command[1::])
-            _thread.start_new_thread(mCastSender,s)
+            _thread.start_new_thread(mCastSender,(s,))
 
 cli()
