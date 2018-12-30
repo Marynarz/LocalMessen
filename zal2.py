@@ -3,6 +3,22 @@ import socket
 import struct
 import _thread
 
+#classes block
+class nickBase:
+    usersBase = {}
+
+    #constructor
+    def __init__(self):
+        pass
+
+    #check if key in dict
+    def checkNick(self, nick):
+        return self.usersBase.has_key(nick)
+
+    #add key too dict
+    def addNick(self, nick, addr):
+        self.usersBase[nick] = addr
+
 #Multicast listener
 def mCastListener():
     multicast_group = '224.1.1.1'
