@@ -26,8 +26,8 @@
       <file leaf-file-name="zaliczenie.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zaliczenie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+            <state relative-caret-position="169">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -38,8 +38,8 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="754">
+              <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
               <folding>
                 <element signature="e#14#27#0" expanded="true" />
               </folding>
@@ -321,7 +321,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546120743916</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="nick class">
+      <created>1546203564097</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1546203564097</updated>
+    </task>
+    <task id="LOCAL-00009" summary="blok zmiennych globalnych dodany, poczateg m cast sendera">
+      <created>1546204534728</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1546204534728</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -360,7 +374,9 @@
     <MESSAGE value="debugowanie i szkic" />
     <MESSAGE value="dodadnie watkow" />
     <MESSAGE value="poczatek pisania, to bedzie dlugi czas ;(" />
-    <option name="LAST_COMMIT_MESSAGE" value="poczatek pisania, to bedzie dlugi czas ;(" />
+    <MESSAGE value="nick class" />
+    <MESSAGE value="blok zmiennych globalnych dodany, poczateg m cast sendera" />
+    <option name="LAST_COMMIT_MESSAGE" value="blok zmiennych globalnych dodany, poczateg m cast sendera" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/server">
@@ -646,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zaliczenie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+        <state relative-caret-position="169">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
@@ -656,8 +672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="754">
+          <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
           <folding>
             <element signature="e#14#27#0" expanded="true" />
           </folding>
