@@ -26,8 +26,8 @@
       <file leaf-file-name="zaliczenie.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zaliczenie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="125">
+              <caret line="56" column="6" selection-start-line="54" selection-end-line="85" selection-end-column="15" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -38,8 +38,8 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+            <state relative-caret-position="420">
+              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
               <folding>
                 <element signature="e#14#27#0" expanded="true" />
               </folding>
@@ -335,7 +335,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546204534728</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="prosty sender">
+      <created>1546205539975</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1546205539975</updated>
+    </task>
+    <task id="LOCAL-00011" summary="wysylanie dziala">
+      <created>1546208026341</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1546208026359</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -347,7 +361,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24642465" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24642465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -376,7 +390,9 @@
     <MESSAGE value="poczatek pisania, to bedzie dlugi czas ;(" />
     <MESSAGE value="nick class" />
     <MESSAGE value="blok zmiennych globalnych dodany, poczateg m cast sendera" />
-    <option name="LAST_COMMIT_MESSAGE" value="blok zmiennych globalnych dodany, poczateg m cast sendera" />
+    <MESSAGE value="prosty sender" />
+    <MESSAGE value="wysylanie dziala" />
+    <option name="LAST_COMMIT_MESSAGE" value="wysylanie dziala" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/server">
@@ -662,8 +678,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zaliczenie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="125">
+          <caret line="56" column="6" selection-start-line="54" selection-end-line="85" selection-end-column="15" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
@@ -672,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+        <state relative-caret-position="420">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding>
             <element signature="e#14#27#0" expanded="true" />
           </folding>
