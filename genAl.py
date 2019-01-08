@@ -1,6 +1,7 @@
 import random
 #populacje
 pBadana = [] #populacja badana
+wyniki = []
 
 #sprawdzanie dopasowania
 def sprDop(x):
@@ -12,3 +13,11 @@ def sprDop(x):
 def genP(x):
     for i in range(0,x):
         pBadana.append(random.randint(1,127))
+
+#let's start
+def engine():
+    genP(10)
+    for i in range(0,10):
+        print(str(sprDop(pBadana[i])))
+
+engine()
