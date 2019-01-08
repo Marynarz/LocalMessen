@@ -20,7 +20,7 @@ def genP(x):
 #mutacja
 def mutant(x):
     mutantGen = 1<< random.randint(0,7) #1 przesuwamy bitowo, losowa pomiedzy najstarszym a najmlodszym bitem
-    print("Mutant gen: " + str(mutantGen))
+    #print("Mutant gen: " + str(mutantGen))
     return x^mutantGen #exclusive or
 
 #krzyzowanie
@@ -39,25 +39,33 @@ def cross(x,y):
 
     sumX = headX | tempY
     sumY = headY | tempX
-    print(x)
-    print(sumX)
-
+    pBadana[pBadana.index(x)] = sumX
+    pBadana[pBadana.index(y)] = sumY
 
 #sterwanie mutacjami i kombinacjami
 def mutSteer():
     for nbs, p in enumerate(pBadana):
         pBadana[nbs] = mutant(p)
+    for p in pBadana:
+        cross(p, pBadana[random.randint(0,len(pBadana)-1)])
 
 #let's start
 def engine():
     genP(5)
-    for i in range(1,20):
-        print("Nowa generacja " + str(i))
+    resultFlag = False
+    genNo = 0
+    while not resultFlag:
+        print("Generacja: " + str(genNo))
         genP(10 - len(pBadana))
         for probka in pBadana:
-            print(str(sprDop(probka)))
+            tempW = sprDop(probka)
+            if tempW == 32260:  #najwyzsze mozliwe dopasowanie
+                resultFlag = True
+            print(str(probka) + ": " + str(tempW))
         del pBadana[0:5]
-        mutSteer()
+        mutSteer()  #mutujemy tylko te które zostały w selekcji
         print("-------------------------")
+        genNo +=1
 
 engine()
+print(sprDop(127))
