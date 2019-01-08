@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48cee0e6-d903-4fdb-87f1-e0c964037856" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/genAl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/szukaj.py" beforeDir="false" afterPath="$PROJECT_DIR$/szukaj.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/genAl.py" beforeDir="false" afterPath="$PROJECT_DIR$/genAl.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,19 +14,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="zaliczenie.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zaliczenie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
+            <state relative-caret-position="15">
               <caret line="83" column="31" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -39,7 +29,7 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
+            <state relative-caret-position="410">
               <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
               <folding>
                 <element signature="e#14#27#0" expanded="true" />
@@ -51,7 +41,7 @@
       <file leaf-file-name="szukaj.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/szukaj.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="-30">
               <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -63,8 +53,8 @@
       <file leaf-file-name="genAl.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/genAl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="770">
+              <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -72,7 +62,7 @@
       <file leaf-file-name="odrzucone.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/odrzucone.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
+            <state relative-caret-position="605">
               <caret line="57" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
@@ -81,46 +71,10 @@
       <file leaf-file-name="thr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="300">
               <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cli.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cli.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="razdwatrzy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/razdwatrzy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serv.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -203,8 +157,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.szukaj">
-    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.genAl">
+    <configuration name="genAl" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LocalMessen" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -216,7 +170,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/genAl.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -295,19 +249,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.server" />
       <item itemvalue="Python.zaliczenie" />
       <item itemvalue="Python.zal2" />
       <item itemvalue="Python.thr" />
       <item itemvalue="Python.szukaj" />
+      <item itemvalue="Python.genAl" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.genAl" />
         <item itemvalue="Python.szukaj" />
         <item itemvalue="Python.zal2" />
         <item itemvalue="Python.thr" />
         <item itemvalue="Python.zaliczenie" />
-        <item itemvalue="Python.server" />
       </list>
     </recent_temporary>
   </component>
@@ -434,7 +388,28 @@
       <option name="project" value="LOCAL" />
       <updated>1546902085708</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="poczatek lab 2. algorytmy genetyczne">
+      <created>1546966233610</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1546966233611</updated>
+    </task>
+    <task id="LOCAL-00018" summary="maly refactor">
+      <created>1546966251438</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1546966251438</updated>
+    </task>
+    <task id="LOCAL-00019" summary="narazie koniec, poczatek silnika programu">
+      <created>1546967493791</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1546967493791</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -482,7 +457,10 @@
     <MESSAGE value="PSI - lab1 -'The Beggining'" />
     <MESSAGE value="dziala rysowanie punkto, to sie mz eprzydac ;)" />
     <MESSAGE value="dziala wysowanie punktow! i wyznacza jakas droge!" />
-    <option name="LAST_COMMIT_MESSAGE" value="dziala wysowanie punktow! i wyznacza jakas droge!" />
+    <MESSAGE value="poczatek lab 2. algorytmy genetyczne" />
+    <MESSAGE value="maly refactor" />
+    <MESSAGE value="narazie koniec, poczatek silnika programu" />
+    <option name="LAST_COMMIT_MESSAGE" value="narazie koniec, poczatek silnika programu" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/serv.py">
@@ -806,9 +784,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client.py" />
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py" />
+    <entry file="file://$PROJECT_DIR$/odrzucone.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/razdwatrzy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="210">
           <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
@@ -818,10 +813,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="195">
           <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -833,19 +838,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cli.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zaliczenie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
+        <state relative-caret-position="15">
           <caret line="83" column="31" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
@@ -853,26 +848,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/odrzucone.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
+        <state relative-caret-position="410">
           <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
           <folding>
             <element signature="e#14#27#0" expanded="true" />
@@ -882,7 +860,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/szukaj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="-30">
           <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -892,8 +870,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/genAl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="770">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
         </state>
       </provider>
     </entry>
