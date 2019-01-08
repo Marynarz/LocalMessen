@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48cee0e6-d903-4fdb-87f1-e0c964037856" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/genAl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/szukaj.py" beforeDir="false" afterPath="$PROJECT_DIR$/szukaj.py" afterDir="false" />
     </list>
@@ -38,7 +39,7 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
+            <state relative-caret-position="1515">
               <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
               <folding>
                 <element signature="e#14#27#0" expanded="true" />
@@ -47,14 +48,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="szukaj.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="szukaj.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/szukaj.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+            <state relative-caret-position="465">
+              <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genAl.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/genAl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -146,6 +156,7 @@
         <option value="$PROJECT_DIR$/odrzucone.py" />
         <option value="$PROJECT_DIR$/zal2.py" />
         <option value="$PROJECT_DIR$/szukaj.py" />
+        <option value="$PROJECT_DIR$/genAl.py" />
       </list>
     </option>
   </component>
@@ -416,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546898935641</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="dziala wysowanie punktow! i wyznacza jakas droge!">
+      <created>1546902085708</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1546902085708</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -425,14 +443,14 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13751318" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.37843785" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24642465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37880793" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49947312" weight="0.37843785" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -463,19 +481,10 @@
     <MESSAGE value="watki dzialaja, nie dziala przerwanie mcastlistenera, ale cos sie trwaorzy" />
     <MESSAGE value="PSI - lab1 -'The Beggining'" />
     <MESSAGE value="dziala rysowanie punkto, to sie mz eprzydac ;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="dziala rysowanie punkto, to sie mz eprzydac ;)" />
+    <MESSAGE value="dziala wysowanie punktow! i wyznacza jakas droge!" />
+    <option name="LAST_COMMIT_MESSAGE" value="dziala wysowanie punktow! i wyznacza jakas droge!" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/razdwatrzy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -863,7 +872,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
+        <state relative-caret-position="1515">
           <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
           <folding>
             <element signature="e#14#27#0" expanded="true" />
@@ -873,11 +882,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/szukaj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+        <state relative-caret-position="465">
+          <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genAl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>

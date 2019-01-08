@@ -30,7 +30,7 @@ def tabCr():
             if o.nrMiasta == p.nrMiasta:
                 pass
             else:
-                dist = m.sqrt(m.pow(m.fabs(p.wspY - o.wspY),2)+m.pow(m.fabs(p.wspX - p.wspX),2))
+                dist = m.sqrt(pow(m.fabs(p.wspY - o.wspY),2)+pow(m.fabs(p.wspX - p.wspX),2))
                 print("Nr: " + str(o.nrMiasta) +" to Nr: "+ str(p.nrMiasta)+ ", DIST: "+str(dist))
 def plotCr(pkts):
     plt.title("Punkty do odwiedzenia")
