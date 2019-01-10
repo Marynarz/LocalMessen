@@ -55,6 +55,21 @@ class mCastListen(threading.Thread):
     def bye(self):
         self.endFlag = True
 
+    def messValidatin(self):
+        temp = self.dataRcv.split()
+        result = 0
+        if temp[0] == "NICK":
+            if not nickB.checkNick(temp[1]):
+                nickB.addNick(temp[1])
+                result = 'ack'
+            else:
+                result = 'NICK '+ temp[1] +' BUSY'
+        elif temp[0] == 'MSG':
+            pass    #TODO what if message comes here, my friend?
+        else:
+            result = 'ack'
+        return result
+
 class mCastSend(threading.Thread):
     mess =''
     multicast_addr = ('224.1.1.1', 10000)
@@ -84,7 +99,7 @@ class mCastSend(threading.Thread):
             self.sock.close()
         return True
     def setMess(self,mess):
-        self.mess = bytes(mess, 'utf8')
+        self.mess = bytes('MSG ' + mess, 'utf8')
 #global vars
 
 nickB = nickBase()
