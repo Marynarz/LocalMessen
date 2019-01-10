@@ -13,16 +13,30 @@ class nickBase:
 
     #check if key in dict
     def checkNick(self, nick):
-        return self.usersBase.has_key(nick)
+        return nick in self.usersBase
 
     #add key too dict
     def addNick(self, nick, addr):
         self.usersBase[nick] = addr
 
+    def newUser(self):
+        succes = False
+        while not succes:
+            tmpNick = input("Your NICK: ")
+            if not self.checkNick(tmpNick):
+                sender.setMess("NICK "+ tmpNick)
+                if sender.run():
+                    self.addNick(tmpNick, '0.0.0.0')
+                    succes = True
+                else:
+                    pass
+
+
 class mCastListen(threading.Thread):
     multicast_group = '224.1.1.1'
     server_address = ('', 10000)
     dataRcv = ''
+    addrRcv =''
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
     thrLoc = ""
     endFlag = False
@@ -41,6 +55,7 @@ class mCastListen(threading.Thread):
                 break
             data, address = self.sock.recvfrom(1024)
             self.encSliDat(data)
+            self.addrRcv = address
             self.prnData()
             self.sock.sendto(bytes('ack', 'utf8'), address)
 
@@ -60,7 +75,7 @@ class mCastListen(threading.Thread):
         result = 0
         if temp[0] == "NICK":
             if not nickB.checkNick(temp[1]):
-                nickB.addNick(temp[1])
+                nickB.addNick(temp[1],self.addrRcv)
                 result = 'ack'
             else:
                 result = 'NICK '+ temp[1] +' BUSY'
@@ -93,12 +108,17 @@ class mCastSend(threading.Thread):
                     break
                 else:
                     datatmp = data.decode('utf8').split()
+                    if datatmp[0] == 'NICK' and datatmp[2] =='BUSY':
+                        return False
                     print(str(server) + ": " +data.decode('utf8'))
         finally:
             print('closing socket')
             self.sock.close()
         return True
+
     def setMess(self,mess):
+        if mess.split()[0] =="NICK":
+            self.mess = bytes(mess,'utf8')
         self.mess = bytes('MSG ' + mess, 'utf8')
 #global vars
 
@@ -110,13 +130,14 @@ listener = mCastListen()
 
 #command line tool
 def cli():
+    nickB.newUser()
     while True:
         command = input("root: ").split()
         if not command:
             pass
         elif command[0].lower() == "exit":
             listener.bye()
-            listener.join()
+            #listener.join()
             break
         elif command[0].lower() == "listen":
             listener.start()
