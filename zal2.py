@@ -92,12 +92,12 @@ class mCastSend(threading.Thread):
 
     def __init__(self):
         threading.Thread.__init__(self)
-        self.sock.settimeout(1)
-        ttl = struct.pack('b', 1)
-        self.sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, ttl)
 
     def run(self):
         try:
+            self.sock.settimeout(1)
+            ttl = struct.pack('b', 1)
+            self.sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, ttl)
             sent = self.sock.sendto(self.mess, self.multicast_addr)
 
             # Look for responses from all recipients
