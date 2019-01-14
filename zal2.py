@@ -125,7 +125,8 @@ class mCastSend(threading.Thread):
                         return False
                     print(str(server) + ": " +data.decode('utf8'))
         finally:
-            print('closing socket')
+            #do this silently ;)
+            #print('closing socket')
             sock.close()
         return True
 
@@ -144,8 +145,9 @@ listener = mCastListen()
 
 #command line tool
 def cli():
-    listener.run()
+    listener.start()
     nickB.newUser()
+
     while True:
         command = input(nickB.selfNick+": ").split()
         if not command:
@@ -157,6 +159,7 @@ def cli():
             break
         elif command[0].lower() == "listen":
             print("Listener already opened")
+            listener.run()
             #listener.join()    do not join, do not bock all program
         elif command[0].lower() == "send":
             sender.setMess(" ".join(command[1::]))

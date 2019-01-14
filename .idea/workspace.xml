@@ -35,8 +35,8 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+            <state relative-caret-position="469">
+              <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
               <folding>
                 <element signature="e#14#27#0" expanded="true" />
               </folding>
@@ -460,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547329534647</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="powinno dzialac lepiej">
+      <created>1547502992934</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1547502992934</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -514,7 +521,8 @@
     <MESSAGE value="dodane peracje bitoowe" />
     <MESSAGE value="koniec zad2" />
     <MESSAGE value="szybka zmiana" />
-    <option name="LAST_COMMIT_MESSAGE" value="szybka zmiana" />
+    <MESSAGE value="powinno dzialac lepiej" />
+    <option name="LAST_COMMIT_MESSAGE" value="powinno dzialac lepiej" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/serv.py">
@@ -840,8 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+        <state relative-caret-position="469">
+          <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
           <folding>
             <element signature="e#14#27#0" expanded="true" />
           </folding>
