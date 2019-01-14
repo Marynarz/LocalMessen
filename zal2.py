@@ -63,12 +63,11 @@ class mCastListen(threading.Thread):
             if self.endFlag:
                 break
             data, address = self.sock.recvfrom(1024)
-
-            if not data == sender.mess:
-                self.encSliDat(data)
+            self.encSliDat(data)
+            if not data == sender.mess or self.dataRcv[0] == 'NICK':
                 self.addrRcv = address
                 self.prnData()
-                self.sock.sendto(bytes('ack', 'utf8'), address)
+                self.sock.sendto(bytes(self.messValidatin(), 'utf8'), address)
 
 
 
@@ -93,7 +92,7 @@ class mCastListen(threading.Thread):
             else:
                 result = 'NICK '+ temp[1] +' BUSY'
         elif temp[0] == 'MSG':
-            pass    #TODO what if message comes here, my friend?
+            result = 'ack'
         else:
             result = 'ack'
         return result
