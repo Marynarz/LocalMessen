@@ -90,7 +90,7 @@ class mCastListen(threading.Thread):
                 result = 'ack'
             else:
                 result = 'NICK '+ self.dataRcv[1] +' BUSY'
-        elif temp[0] == 'MSG':
+        elif self.dataRcv[0] == 'MSG':
             result = 'ack'
         else:
             result = 'ack'
@@ -155,10 +155,10 @@ def cli():
             listener.bye()
             sender.setMess("BYE!")
             sender.run()
+            listener.join()
             break
         elif command[0].lower() == "listen":
             print("Listener already opened")
-            listener.run()
             #listener.join()    do not join, do not bock all program
         elif command[0].lower() == "send":
             sender.setMess(" ".join(command[1::]))
