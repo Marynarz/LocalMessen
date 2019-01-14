@@ -83,14 +83,13 @@ class mCastListen(threading.Thread):
         self.endFlag = True
 
     def messValidatin(self):
-        temp = self.dataRcv.split()
-        result = 0
-        if temp[0] == "NICK":
-            if not nickB.checkNick(temp[1]):
-                nickB.addNick(temp[1],self.addrRcv)
+        result = ''
+        if self.dataRcv[0] == "NICK":
+            if not nickB.checkNick(self.dataRcv[1]):
+                nickB.addNick(self.dataRcv[1],self.addrRcv)
                 result = 'ack'
             else:
-                result = 'NICK '+ temp[1] +' BUSY'
+                result = 'NICK '+ self.dataRcv[1] +' BUSY'
         elif temp[0] == 'MSG':
             result = 'ack'
         else:
