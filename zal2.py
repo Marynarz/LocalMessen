@@ -133,7 +133,8 @@ class mCastSend(threading.Thread):
     def setMess(self,mess):
         if mess.split()[0] =="NICK":
             self.mess = bytes(mess,'utf8')
-        self.mess = bytes('MSG ' + mess, 'utf8')
+        else:
+            self.mess = bytes('MSG ' + mess, 'utf8')
 
 #global vars
 
