@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48cee0e6-d903-4fdb-87f1-e0c964037856" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zal2.py" beforeDir="false" afterPath="$PROJECT_DIR$/zal2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +35,8 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+            <state relative-caret-position="574">
+              <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
               <folding>
                 <element signature="e#14#27#0" expanded="true" />
               </folding>
@@ -480,7 +481,28 @@
       <option name="project" value="LOCAL" />
       <updated>1547504744684</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="poprawa walidacji messagow">
+      <created>1547505023754</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1547505023754</updated>
+    </task>
+    <task id="LOCAL-00027" summary="poprawki poprawki">
+      <created>1547505170485</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1547505170485</updated>
+    </task>
+    <task id="LOCAL-00028" summary="powinno dzialac">
+      <created>1547505519957</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1547505519957</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -512,9 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Pierwszy commit, jeszcze nawet nie ma zarysu projektu ;(" />
-    <MESSAGE value="Klasa Client Handler (ClientConn)&#10;Po odebraniu polaczenia powinien czekac na wiadomosc i odeslac wiadomosc odwrotna" />
-    <MESSAGE value="Test na zielono, dziala!" />
     <MESSAGE value="Dodanie prostego klienta, do testow" />
     <MESSAGE value="debugowanie i szkic" />
     <MESSAGE value="dodadnie watkow" />
@@ -537,7 +556,10 @@
     <MESSAGE value="powinno dzialac lepiej" />
     <MESSAGE value="threadsy sie zgadzaja na 3 juz na pewno zadziala" />
     <MESSAGE value="szybka poprawka walidacji messeag" />
-    <option name="LAST_COMMIT_MESSAGE" value="szybka poprawka walidacji messeag" />
+    <MESSAGE value="poprawa walidacji messagow" />
+    <MESSAGE value="poprawki poprawki" />
+    <MESSAGE value="powinno dzialac" />
+    <option name="LAST_COMMIT_MESSAGE" value="powinno dzialac" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/serv.py">
@@ -863,8 +885,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        <state relative-caret-position="574">
+          <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
           <folding>
             <element signature="e#14#27#0" expanded="true" />
           </folding>

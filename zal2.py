@@ -66,7 +66,7 @@ class mCastListen(threading.Thread):
             self.encSliDat(data)
             if not data == sender.mess or self.dataRcv[0] == 'NICK':
                 self.addrRcv = address
-                self.prnData()
+                #self.prnData()
                 self.sock.sendto(bytes(self.messValidatin(), 'utf8'), address)
 
 
@@ -91,6 +91,7 @@ class mCastListen(threading.Thread):
             else:
                 result = 'NICK '+ self.dataRcv[1] +' BUSY'
         elif self.dataRcv[0] == 'MSG':
+            print(" ".join(self.dataRcv[1::]))
             result = 'ack'
         else:
             result = 'ack'
@@ -120,8 +121,9 @@ class mCastSend(threading.Thread):
                 else:
                     datatmp = data.decode('utf8').split()
                     if datatmp[0] == 'NICK' and datatmp[2] =='BUSY':
+                        print("Nick busy!")
                         return False
-                    print(str(server) + ": " +data.decode('utf8'))
+                    #print(str(server) + ": " +data.decode('utf8'))
         finally:
             #do this silently ;)
             #print('closing socket')
@@ -132,7 +134,7 @@ class mCastSend(threading.Thread):
         if mess.split()[0] =="NICK":
             self.mess = bytes(mess,'utf8')
         else:
-            self.mess = bytes('MSG ' + mess, 'utf8')
+            self.mess = bytes('MSG ' + nickB.getSelfNick() + " " + mess, 'utf8')
 
 #global vars
 
