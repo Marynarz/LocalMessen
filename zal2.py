@@ -49,13 +49,20 @@ class NickBase:
 #room base
 class RoomHandler:
     avaliableRooms = []
-    lastRoom = ""
+    activeRoom = ""
 
     def __init__(self):
         pass
 
     def checkAval(self):
-        pass
+        sender.setMess("ROOM AVAL")
+        sender.run()
+        tmp = sender.getAck().split()
+        for r in tmp:
+            self.avaliableRooms.append(r)
+
+    def roomsAval(self):
+        return " ".join(self.avaliableRooms)
 
     def joinRoom(self):
         pass
@@ -92,11 +99,7 @@ class MCastListen(threading.Thread):
             self.encSliDat(data)
             if not data == sender.mess or self.dataRcv[0] == 'NICK':
                 self.addrRcv = address
-                #self.prnData()
                 self.sock.sendto(bytes(self.messValidatin(), 'utf8'), address)
-
-
-
         print("Bye!")
 
     def encSliDat(self,mess):
@@ -109,13 +112,14 @@ class MCastListen(threading.Thread):
         self.endFlag = True
 
     def messValidatin(self):
-        result = ''
         if self.dataRcv[0] == "NICK":
             if not nickB.checkNick(self.dataRcv[1]):
                 nickB.addNick(self.dataRcv[1],self.addrRcv)
                 result = 'ack'
             else:
                 result = 'NICK '+ self.dataRcv[1] +' BUSY'
+        elif self.dataRcv[0] == "ROOM" and self.dataRcv[1] == "AVAL":
+            result = rooms.roomsAval()
         elif self.dataRcv[0] == 'MSG':
             print(" ".join(self.dataRcv[1::]))
             result = 'ack'
@@ -125,8 +129,9 @@ class MCastListen(threading.Thread):
 
 #sender
 class MCastSend(threading.Thread):
-    mess =''
+    mess = ""
     multicast_addr = ('224.1.1.1', 10000)
+    ack = ""
 
     def __init__(self):
         threading.Thread.__init__(self)
@@ -137,7 +142,7 @@ class MCastSend(threading.Thread):
             sock.settimeout(1)
             ttl = struct.pack('b', 1)
             sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, ttl)
-            sent = sock.sendto(self.mess, self.multicast_addr)
+            sock.sendto(self.mess, self.multicast_addr)
 
             # Look for responses from all recipients
             while True:
@@ -146,28 +151,30 @@ class MCastSend(threading.Thread):
                 except socket.timeout:
                     break
                 else:
+                    self.ack = data
                     datatmp = data.decode('utf8').split()
                     if datatmp[0] == 'NICK' and datatmp[2] =='BUSY':
                         print("Nick busy!")
                         return False
-                    #print(str(server) + ": " +data.decode('utf8'))
         finally:
-            #do this silently ;)
-            #print('closing socket')
             sock.close()
         return True
 
     def setMess(self,mess):
-        if mess.split()[0] =="NICK":
+        if mess.split()[0] != "MSG":
             self.mess = bytes(mess,'utf8')
         else:
             self.mess = bytes('MSG ' + nickB.getSelfNick() + " " + mess, 'utf8')
+
+    def getAck(self):
+        return self.ack
 
 #global vars
 
 nickB = NickBase()
 sender = MCastSend()
 listener = MCastListen()
+rooms = RoomHandler()
 
 #func block
 def help():
@@ -190,6 +197,7 @@ def help():
 def cli():
     listener.start()
     nickB.newUser()
+    print("Rooms: "+rooms.roomsAval())
 
     while True:
         command = input(nickB.selfNick+": ").split()
