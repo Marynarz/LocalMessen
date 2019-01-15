@@ -191,7 +191,7 @@ class MCastSend(threading.Thread):
             if "ROOM" in self.ack:
                 del self.ack[self.ack.index("ROOM")]
                 del self.ack[self.ack.index(rooms.getActiveRoom())]
-                print(" ".join(self.ack[2::]))
+                print(" ".join(self.ack))
         return True
 
     def setMess(self,mess):
