@@ -62,10 +62,14 @@ class RoomHandler:
         sender.setMess("ROOM AVAL")
         sender.run()
         tmp = sender.getAck().split()
+        print(tmp)
         for r in tmp:
+            print(r)
             self.avaliableRooms.append(r)
 
     def roomsAval(self):
+        if "ack" in self.avaliableRooms:
+            del self.avaliableRooms[self.avaliableRooms.index("ack")]
         return " ".join(self.avaliableRooms)
 
     def joinRoom(self,roomName):
@@ -75,8 +79,13 @@ class RoomHandler:
             self.avaliableRooms.append(roomName)
         self.activeRoom = roomName
 
-    def leftRoom(self):
-        pass
+    def leftRoom(self,bye):
+        sender.setMess(" ".join(["LEFT",self.activeRoom,nickB.getSelfNick()]))
+        sender.run()
+        if not bye:
+            self.avaliableRooms
+            print("Rooms: "+ self.roomsAval())
+            self.joinRoom(input("Rooms: "))
 
     def getActiveRoom(self):
         return self.activeRoom
@@ -131,11 +140,15 @@ class MCastListen(threading.Thread):
         elif self.dataRcv[0] == "JOIN" and self.dataRcv[1] == rooms.getActiveRoom():
             print('\x1b[1;31;40m' + self.dataRcv[2]+ " join room!" + '\x1b[0m')
             result = 'ack'
+        elif self.dataRcv[0] == "LEFT" and self.dataRcv[1] == rooms.getActiveRoom():
+            print('\x1b[1;31;40m' + self.dataRcv[2] + " leave room!" + '\x1b[0m')
+            result = 'ack'
         elif self.dataRcv[0] == 'MSG' and self.dataRcv[2] == rooms.getActiveRoom():
-            print('\x1b[1;32;40m' + " ".join(self.dataRcv[1::]) + '\x1b[0m')
+            print('\x1b[1;32;40m' + self.dataRcv[1] + ": " + " ".join(self.dataRcv[3::]) + '\x1b[0m')
             result = 'ack'
         else:
             result = 'ack'
+        print(result)
         return result
 
 #sender
@@ -162,7 +175,7 @@ class MCastSend(threading.Thread):
                 except socket.timeout:
                     break
                 else:
-                    self.ack = data
+                    self.ack = data.decode('utf8')
                     datatmp = data.decode('utf8').split()
                     if datatmp[0] == 'NICK' and datatmp[2] =='BUSY':
                         print('\x1b[1;31;40m' + "Nick busy!" + '\x1b[0m')
@@ -172,10 +185,11 @@ class MCastSend(threading.Thread):
         return True
 
     def setMess(self,mess):
-        if mess.split()[0] != "MSG":
+        if mess.split()[0] in ["JOIN","NICK","ROOM","LEFT"]:
             self.mess = bytes(mess,'utf8')
         else:
             self.mess = bytes(" ".join(["MSG",nickB.getSelfNick(),rooms.getActiveRoom(),mess]),'utf8') #'MSG ' + nickB.getSelfNick() + " " + rooms.getActiveRoom()+ " " + mess, 'utf8')
+        print(self.mess)
 
     def getAck(self):
         return self.ack
@@ -208,6 +222,7 @@ def help():
 def cli():
     listener.start()
     nickB.newUser()
+    rooms.checkAval()
     print("Rooms: "+rooms.roomsAval())
     rooms.joinRoom(input("Room: "))
 
