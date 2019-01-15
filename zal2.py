@@ -1,3 +1,7 @@
+#
+# W. Niedzielski 206074
+# Marynarz @ github.com
+#
 #import block
 import socket
 import struct
