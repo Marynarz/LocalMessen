@@ -3,11 +3,6 @@
 # Marynarz @ github.com
 #
 
-#print('\x1b[1;31;40m' + 'Success!' + '\x1b[0m')
-#1;32;40 <-mess
-#1;31;40 <-err
-#1;33;41 <-root
-
 #import block
 import socket
 import struct
@@ -15,6 +10,9 @@ import threading
 
 #classes block
 #nick base
+from socket import socket
+
+
 class NickBase:
     usersBase = {}
     selfNick = ""
@@ -85,7 +83,7 @@ class RoomHandler:
         sender.setMess(" ".join(["LEFT",self.activeRoom,nickB.getSelfNick()]))
         sender.run()
         if not bye:
-            self.avaliableRooms
+            self.checkAval()
             print("Rooms: "+ self.roomsAval())
             self.joinRoom(input("Rooms: "))
 
@@ -241,26 +239,27 @@ def cli():
 
     while True:
         command = input('\x1b[1;33;41m' + nickB.selfNick + ":" + '\x1b[0m'+" ").split()
+        commandMain = command[0].lower()
         if not command:
             pass
-        elif command[0].lower() == "exit":
+        elif commandMain == "exit":
             listener.bye()
             rooms.leftRoom(True)
             sender.setMess("BYE!")
             sender.run()
             listener.join()
             break
-        elif command[0].lower() == "listen":
+        elif commandMain == "listen":
             print("Listener already opened")
             #listener.join()    do not join, do not bock all program
-        elif command[0].lower() == "send":
+        elif commandMain == "send":
             sender.setMess(" ".join(command[1::]))
             sender.run()
-        elif command[0].lower() == "help":
+        elif commandMain == "help":
             help()
-        elif command[0].lower() == "left":
+        elif commandMain == "left":
             rooms.leftRoom(False)
-        elif command[0].lower() =="whois":
+        elif commandMain == "whois":
             rooms.whoIs()
         else:
             print("Wrong command!")
