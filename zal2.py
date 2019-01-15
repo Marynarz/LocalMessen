@@ -5,7 +5,8 @@ import threading
 import sys
 
 #classes block
-class nickBase:
+#nick base
+class NickBase:
     usersBase = {}
     selfNick = ""
 
@@ -40,8 +41,28 @@ class nickBase:
     def getSelfNick(self):
         return self.selfNick
 
+#room base
+class RoomHandler:
+    avaliableRooms = []
+    lastRoom = ""
 
-class mCastListen(threading.Thread):
+    def __init__(self):
+        pass
+
+    def checkAval(self):
+        pass
+
+    def joinRoom(self):
+        pass
+
+    def leftRoom(self):
+        pass
+
+    def whoIs(self):
+        pass
+
+#listener
+class MCastListen(threading.Thread):
     multicast_group = '224.1.1.1'
     server_address = ('', 10000)
     dataRcv = ''
@@ -97,7 +118,8 @@ class mCastListen(threading.Thread):
             result = 'ack'
         return result
 
-class mCastSend(threading.Thread):
+#sender
+class MCastSend(threading.Thread):
     mess =''
     multicast_addr = ('224.1.1.1', 10000)
 
@@ -138,9 +160,9 @@ class mCastSend(threading.Thread):
 
 #global vars
 
-nickB = nickBase()
-sender = mCastSend()
-listener = mCastListen()
+nickB = NickBase()
+sender = MCastSend()
+listener = MCastListen()
 
 #func block
 
