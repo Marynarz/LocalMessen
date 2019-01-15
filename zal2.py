@@ -62,9 +62,7 @@ class RoomHandler:
         sender.setMess("ROOM AVAL")
         sender.run()
         tmp = sender.getAck().split()
-        print(tmp)
         for r in tmp:
-            print(r)
             self.avaliableRooms.append(r)
 
     def roomsAval(self):
@@ -148,7 +146,6 @@ class MCastListen(threading.Thread):
             result = 'ack'
         else:
             result = 'ack'
-        print(result)
         return result
 
 #sender
@@ -189,7 +186,6 @@ class MCastSend(threading.Thread):
             self.mess = bytes(mess,'utf8')
         else:
             self.mess = bytes(" ".join(["MSG",nickB.getSelfNick(),rooms.getActiveRoom(),mess]),'utf8') #'MSG ' + nickB.getSelfNick() + " " + rooms.getActiveRoom()+ " " + mess, 'utf8')
-        print(self.mess)
 
     def getAck(self):
         return self.ack
@@ -232,6 +228,7 @@ def cli():
             pass
         elif command[0].lower() == "exit":
             listener.bye()
+            rooms.leftRoom(True)
             sender.setMess("BYE!")
             sender.run()
             listener.join()
@@ -244,6 +241,8 @@ def cli():
             sender.run()
         elif command[0].lower() == "help":
             help()
+        elif command[0].lower() == "left":
+            rooms.leftRoom(False)
         else:
             print("Wrong command!")
 

@@ -35,8 +35,8 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="174" column="93" selection-start-line="174" selection-start-column="93" selection-end-line="174" selection-end-column="93" />
+            <state relative-caret-position="754">
+              <caret line="245" column="13" lean-forward="true" selection-start-line="245" selection-start-column="13" selection-end-line="245" selection-end-column="13" />
               <folding>
                 <element signature="e#164#177#0" expanded="true" />
               </folding>
@@ -537,7 +537,28 @@
       <option name="project" value="LOCAL" />
       <updated>1547580615973</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="wchodzenie do pkju aktywne! cheeki breeki!">
+      <created>1547585761037</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1547585761037</updated>
+    </task>
+    <task id="LOCAL-00035" summary="poprawka, male faux pas">
+      <created>1547585950125</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1547585950125</updated>
+    </task>
+    <task id="LOCAL-00036" summary="pokoje chyba skonczne">
+      <created>1547587719086</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1547587719086</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -569,9 +590,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="blok zmiennych globalnych dodany, poczateg m cast sendera" />
-    <MESSAGE value="prosty sender" />
-    <MESSAGE value="wysylanie dziala" />
     <MESSAGE value="nic juz nie dziala" />
     <MESSAGE value="watki dzialaja, nie dziala przerwanie mcastlistenera, ale cos sie trwaorzy" />
     <MESSAGE value="PSI - lab1 -'The Beggining'" />
@@ -594,7 +612,10 @@
     <MESSAGE value="credentials" />
     <MESSAGE value="dodanie helpa i kosmetyka" />
     <MESSAGE value="sprawdzanie dostpenych pokoi" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprawdzanie dostpenych pokoi" />
+    <MESSAGE value="wchodzenie do pkju aktywne! cheeki breeki!" />
+    <MESSAGE value="poprawka, male faux pas" />
+    <MESSAGE value="pokoje chyba skonczne" />
+    <option name="LAST_COMMIT_MESSAGE" value="pokoje chyba skonczne" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/serv.py">
@@ -920,8 +941,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="174" column="93" selection-start-line="174" selection-start-column="93" selection-end-line="174" selection-end-column="93" />
+        <state relative-caret-position="754">
+          <caret line="245" column="13" lean-forward="true" selection-start-line="245" selection-start-column="13" selection-end-line="245" selection-end-column="13" />
           <folding>
             <element signature="e#164#177#0" expanded="true" />
           </folding>
