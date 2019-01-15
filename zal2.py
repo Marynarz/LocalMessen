@@ -189,6 +189,8 @@ class MCastSend(threading.Thread):
         finally:
             sock.close()
             if "ROOM" in self.ack:
+                del self.ack[self.ack.index("ROOM")]
+                del self.ack[self.ack.index(rooms.getActiveRoom())]
                 print(" ".join(self.ack[2::]))
         return True
 
