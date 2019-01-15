@@ -59,7 +59,8 @@ class RoomHandler:
         sender.run()
         tmp = sender.getAck()
         for r in tmp:
-            self.avaliableRooms.append(r)
+            if r not in self.avaliableRooms:
+                self.avaliableRooms.append(r)
 
     def addRoom(self,room):
         if room not in self.avaliableRooms:
