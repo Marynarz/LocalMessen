@@ -71,6 +71,9 @@ class RoomHandler:
     def joinRoom(self,roomName):
         sender.setMess("JOIN "+ roomName + " " + nickB.getSelfNick())
         sender.run()
+        if roomName not in self.avaliableRooms:
+            self.avaliableRooms.append(roomName)
+        self.activeRoom = roomName
 
     def leftRoom(self):
         pass
@@ -206,6 +209,7 @@ def cli():
     listener.start()
     nickB.newUser()
     print("Rooms: "+rooms.roomsAval())
+    rooms.joinRoom(input("Room: "))
 
     while True:
         command = input('\x1b[1;33;41m' + nickB.selfNick + ":" + '\x1b[0m'+" ").split()
