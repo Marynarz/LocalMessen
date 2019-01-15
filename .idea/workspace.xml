@@ -35,8 +35,8 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="604">
+              <caret line="184" column="26" selection-start-line="184" selection-start-column="26" selection-end-line="184" selection-end-column="26" />
               <folding>
                 <element signature="e#14#27#0" expanded="true" />
               </folding>
@@ -516,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547576993445</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="credentials">
+      <created>1547577347776</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1547577347776</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -548,7 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="dodadnie watkow" />
     <MESSAGE value="poczatek pisania, to bedzie dlugi czas ;(" />
     <MESSAGE value="nick class" />
     <MESSAGE value="blok zmiennych globalnych dodany, poczateg m cast sendera" />
@@ -573,7 +579,8 @@
     <MESSAGE value="powinno dzialac" />
     <MESSAGE value="na 3 koniec!" />
     <MESSAGE value="struktura na 4 + whois na 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="struktura na 4 + whois na 5" />
+    <MESSAGE value="credentials" />
+    <option name="LAST_COMMIT_MESSAGE" value="credentials" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/serv.py">
@@ -899,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="604">
+          <caret line="184" column="26" selection-start-line="184" selection-start-column="26" selection-end-line="184" selection-end-column="26" />
           <folding>
             <element signature="e#14#27#0" expanded="true" />
           </folding>

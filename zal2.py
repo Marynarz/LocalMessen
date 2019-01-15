@@ -2,6 +2,7 @@
 # W. Niedzielski 206074
 # Marynarz @ github.com
 #
+
 #import block
 import socket
 import struct
@@ -169,6 +170,21 @@ sender = MCastSend()
 listener = MCastListen()
 
 #func block
+def help():
+    print("Chat multicastwy dla sieci lokalnej")
+    print("-----------------------------------")
+    print("Komendy:")
+    print(" : listen - odpalenie nasluchu, !!! Komenda nie dziala !!!")
+    print(" : send <wiadomosc> - wysylanie wiadomosci")
+    print(" : help - odpalenie tej pomocy")
+    print(" : exit - wyjscie z programu")
+    print()
+    print("Funkcje:")
+    print(" : nasluch - nasluch startuje w momencie dpalenia programu i trwa do jego zamkniecia,")
+    print("kazda wiadomosc jest decodowana i analizowana pod katem zawartosci")
+    print(" : nicki - system oblsuguje system nickow, tak ze kazdy nick jest unikalny w sieci")
+    print(" : wysylanie - przed wyslaniem wiadomosci, odpowiedni komunikat jest budowany i enkdowany")
+    print("-----------------------------------")
 
 #command line tool
 def cli():
@@ -191,5 +207,9 @@ def cli():
         elif command[0].lower() == "send":
             sender.setMess(" ".join(command[1::]))
             sender.run()
+        elif command[0].lower() == "help":
+            help()
+        else:
+            print("Wrong command!")
 
 cli()
