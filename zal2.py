@@ -10,8 +10,6 @@ import threading
 
 #classes block
 #nick base
-from socket import socket
-
 
 class NickBase:
     usersBase = {}
