@@ -35,10 +35,10 @@
       <file leaf-file-name="zal2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zal2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="184" column="26" selection-start-line="184" selection-start-column="26" selection-end-line="184" selection-end-column="26" />
+            <state relative-caret-position="360">
+              <caret line="174" column="93" selection-start-line="174" selection-start-column="93" selection-end-line="174" selection-end-column="93" />
               <folding>
-                <element signature="e#14#27#0" expanded="true" />
+                <element signature="e#164#177#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -523,7 +523,21 @@
       <option name="project" value="LOCAL" />
       <updated>1547577347776</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="dodanie helpa i kosmetyka">
+      <created>1547578017193</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1547578017193</updated>
+    </task>
+    <task id="LOCAL-00033" summary="sprawdzanie dostpenych pokoi">
+      <created>1547580615973</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1547580615973</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -533,6 +547,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13751318" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.37843785" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.24642465" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
@@ -547,7 +562,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -555,8 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="poczatek pisania, to bedzie dlugi czas ;(" />
-    <MESSAGE value="nick class" />
     <MESSAGE value="blok zmiennych globalnych dodany, poczateg m cast sendera" />
     <MESSAGE value="prosty sender" />
     <MESSAGE value="wysylanie dziala" />
@@ -580,7 +592,9 @@
     <MESSAGE value="na 3 koniec!" />
     <MESSAGE value="struktura na 4 + whois na 5" />
     <MESSAGE value="credentials" />
-    <option name="LAST_COMMIT_MESSAGE" value="credentials" />
+    <MESSAGE value="dodanie helpa i kosmetyka" />
+    <MESSAGE value="sprawdzanie dostpenych pokoi" />
+    <option name="LAST_COMMIT_MESSAGE" value="sprawdzanie dostpenych pokoi" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/serv.py">
@@ -595,7 +609,7 @@
         <state relative-caret-position="1545">
           <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
           <folding>
-            <element signature="e#14#27#0" expanded="true" />
+            <element signature="e#164#177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -640,7 +654,7 @@
         <state relative-caret-position="375">
           <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding>
-            <element signature="e#14#27#0" expanded="true" />
+            <element signature="e#164#177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -685,7 +699,7 @@
         <state relative-caret-position="405">
           <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
           <folding>
-            <element signature="e#14#27#0" expanded="true" />
+            <element signature="e#164#177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -906,10 +920,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zal2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="184" column="26" selection-start-line="184" selection-start-column="26" selection-end-line="184" selection-end-column="26" />
+        <state relative-caret-position="360">
+          <caret line="174" column="93" selection-start-line="174" selection-start-column="93" selection-end-line="174" selection-end-column="93" />
           <folding>
-            <element signature="e#14#27#0" expanded="true" />
+            <element signature="e#164#177#0" expanded="true" />
           </folding>
         </state>
       </provider>

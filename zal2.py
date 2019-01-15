@@ -3,11 +3,15 @@
 # Marynarz @ github.com
 #
 
+#print('\x1b[1;31;40m' + 'Success!' + '\x1b[0m')
+#1;32;40 <-mess
+#1;31;40 <-err
+#1;33;41 <-root
+
 #import block
 import socket
 import struct
 import threading
-import sys
 
 #classes block
 #nick base
@@ -64,11 +68,15 @@ class RoomHandler:
     def roomsAval(self):
         return " ".join(self.avaliableRooms)
 
-    def joinRoom(self):
-        pass
+    def joinRoom(self,roomName):
+        sender.setMess("JOIN "+ roomName + " " + nickB.getSelfNick())
+        sender.run()
 
     def leftRoom(self):
         pass
+
+    def getActiveRoom(self):
+        return self.activeRoom
 
     def whoIs(self):
         pass
@@ -105,9 +113,6 @@ class MCastListen(threading.Thread):
     def encSliDat(self,mess):
         self.dataRcv = mess.decode('utf8').split()
 
-    def prnData(self):
-        print(" ".join(self.dataRcv))
-
     def bye(self):
         self.endFlag = True
 
@@ -120,8 +125,11 @@ class MCastListen(threading.Thread):
                 result = 'NICK '+ self.dataRcv[1] +' BUSY'
         elif self.dataRcv[0] == "ROOM" and self.dataRcv[1] == "AVAL":
             result = rooms.roomsAval()
-        elif self.dataRcv[0] == 'MSG':
-            print(" ".join(self.dataRcv[1::]))
+        elif self.dataRcv[0] == "JOIN" and self.dataRcv[1] == rooms.getActiveRoom():
+            print('\x1b[1;31;40m' + self.dataRcv[2]+ " join room!" + '\x1b[0m')
+            result = 'ack'
+        elif self.dataRcv[0] == 'MSG' and self.dataRcv[2] == rooms.getActiveRoom():
+            print('\x1b[1;32;40m' + " ".join(self.dataRcv[1::]) + '\x1b[0m')
             result = 'ack'
         else:
             result = 'ack'
@@ -154,7 +162,7 @@ class MCastSend(threading.Thread):
                     self.ack = data
                     datatmp = data.decode('utf8').split()
                     if datatmp[0] == 'NICK' and datatmp[2] =='BUSY':
-                        print("Nick busy!")
+                        print('\x1b[1;31;40m' + "Nick busy!" + '\x1b[0m')
                         return False
         finally:
             sock.close()
@@ -164,7 +172,7 @@ class MCastSend(threading.Thread):
         if mess.split()[0] != "MSG":
             self.mess = bytes(mess,'utf8')
         else:
-            self.mess = bytes('MSG ' + nickB.getSelfNick() + " " + mess, 'utf8')
+            self.mess = bytes(" ".join(["MSG",nickB.getSelfNick(),rooms.getActiveRoom(),mess]),'utf8') #'MSG ' + nickB.getSelfNick() + " " + rooms.getActiveRoom()+ " " + mess, 'utf8')
 
     def getAck(self):
         return self.ack
@@ -200,7 +208,7 @@ def cli():
     print("Rooms: "+rooms.roomsAval())
 
     while True:
-        command = input(nickB.selfNick+": ").split()
+        command = input('\x1b[1;33;41m' + nickB.selfNick + ":" + '\x1b[0m'+" ").split()
         if not command:
             pass
         elif command[0].lower() == "exit":
